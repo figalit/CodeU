@@ -24,6 +24,13 @@ def compare_dicts(dict1, dict2):
 		else:
 			if dict2[char] != dict1[char]:
 				return False
+	for char in dict2.keys():
+		if char not in dict1.keys():
+			return False
+		else:
+			if dict2[char] != dict1[char]:
+				return False
+	
 	return True
 
 print findPermutations(sys.argv[1], sys.argv[2])
