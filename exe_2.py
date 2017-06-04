@@ -35,6 +35,16 @@ class LinkedList(object):
 			print str(current.get_data())
 			current = current.get_next()
 
+def print_kth_last_runner(linked_list, k):
+	current1 = linked_list.head
+	current2 = linked_list.head
+	if current1 != None:
+		for i in range(k+1):
+			current1 = current1.get_next()
+		while current1 != None:
+			current2 = current2.get_next()
+			current1 = current1.get_next()
+		print str(current2.get_data())
 
 def print_kth_last(linked_list, k):
 	size = linked_list.size()
@@ -62,6 +72,9 @@ def test_code():
 
 	linked_list = LinkedList()
 	linked_list.head = node1
-	print_kth_last(linked_list, 1)
+	for i in range(0, 5): 
+		print (str(i), ' th last')
+		print_kth_last_runner(linked_list, i)
+		print_kth_last(linked_list,i)
 
 test_code()
