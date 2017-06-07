@@ -17,10 +17,10 @@ class BinaryTree(object):
 	def __init__(self, root=None):
 		self.root = root
 
-	def insert(self, node, goal_parent, left_or_right):
+	def insert(self, node, goal_parent, add_on_left):
 		# traverse to find the goal_parent and add the node there on left or right
 		parent = self.find_node(self.root, goal_parent)
-		if left_or_right:
+		if add_on_left:
 			parent.left_key = node
 		else:
 			parent.right_key = node
