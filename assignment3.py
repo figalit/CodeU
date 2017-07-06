@@ -1,7 +1,6 @@
 class Dictionary(object):
 	def __init__(self, dictionary=None):
 		self.dictionary = []
-		# self.prefixes = []
 
 	def insert_words(self, word_list):
 		self.dictionary = word_list
